@@ -1,5 +1,5 @@
 {% set name = "tcplotter" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/HUGG/tcplotter/archive/v{{ version }}.tar.gz
-  sha256: cba4bceedde3bfec39cbab2391a3c9833ce0331454cb60c9a5e7d94972fcb954
+  sha256: 50a5fad2bc26d7fc49fd001480645639971f4614422e9bd622571d1c21e0b279
 
 build:
-  number: 2
+  number: 0
   # Build only for Python 3.6 and above
   skip: true  # [py<36]
- 
+
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
@@ -51,7 +51,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Plots predicted thermochronology age and closure temperatures'
+  summary: Plots predicted thermochronology age and closure temperatures
   description: |
     tcplotter is a set of functions and command-line utilities for plotting
     predicted thermochronometer ages and closure temperatures as a function
