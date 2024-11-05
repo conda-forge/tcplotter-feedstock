@@ -10,13 +10,14 @@ source:
   sha256: 8f4ac236cb4832efe4dcbed176b70e74b1087b2746d73bf9cb19283cf6ff2f1a
 
 build:
-  number: 0
+  number: 1
   # Build only for Python 3.6 and above
   skip: true  # [py<36]
 
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
+    - {{ stdlib("c") }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
     - {{ compiler('m2w64-toolchain') }}  # [win]
     - cmake
