@@ -1,5 +1,5 @@
 {% set name = "tcplotter" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/HUGG/tcplotter/archive/v{{ version }}.tar.gz
-  sha256: 8f4ac236cb4832efe4dcbed176b70e74b1087b2746d73bf9cb19283cf6ff2f1a
+  sha256: d4bf9c2771c3581b919d168a326112cfcc08ef1ae8ea93d7289b559f172abbeb
 
 build:
   number: 0
@@ -17,6 +17,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}  # [not win]
+    - {{ stdlib("c") }}    # [not win]
     - {{ compiler('cxx') }}  # [not win]
     - {{ compiler('m2w64-toolchain') }}  # [win]
     - cmake
