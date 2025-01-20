@@ -11,7 +11,7 @@ cd src
 mkdir build && cd build
 
 # Build with cmake
-cmake ..
+cmake ${CMAKE_ARGS} ..
 cmake --build .
 
 # Install executables to bin directory
